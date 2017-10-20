@@ -1,0 +1,140 @@
+{
+    "name": "shellcheck",
+    "patterns": [
+      {
+        "patternId": "SC2001",
+        "level": "Info",
+        "category": "CodeStyle"
+      },
+      {
+        "patternId": "SC2002",
+        "level": "Info",
+        "category": "Performance"
+      },
+      {
+        "patternId": "SC2003",
+        "level": "Info",
+        "category": "CodeStyle"
+      },
+      {
+        "patternId": "SC2004",
+        "level": "Info",
+        "category": "CodeStyle"
+      },
+      {
+        "patternId": "SC2006",
+        "level": "Info",
+        "category": "CodeStyle"
+      },
+      {
+        "patternId": "SC2008",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2009",
+        "level": "Info",
+        "category": "BestPractice"
+      },
+      {
+        "patternId": "SC2010",
+        "level": "Info",
+        "category": "BestPractice"
+      },
+      {
+        "patternId": "SC2012",
+        "level": "Info",
+        "category": "BestPractice"
+      },
+      {
+        "patternId": "SC2013",
+        "level": "Info",
+        "category": "BestPractice"
+      },
+      {
+        "patternId": "SC2014",
+        "level": "Info",
+        "category": "BestPractice"
+      },
+      {
+        "patternId": "SC2015",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2016",
+        "level": "Info",
+        "category": "CodeStyle"
+      },
+      {
+        "patternId": "SC2017",
+        "level": "Info",
+        "category": "BestPractice"
+      },
+      {
+        "patternId": "SC2020",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2022",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2024",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2025",
+        "level": "Info",
+        "category": "CodeStyle"
+      },
+      {
+        "patternId": "SC2026",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2027",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2028",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2029",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2031",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2033",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2034",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2036",
+        "level": "Info",
+        "category": "ErrorProne"
+      },
+      {
+        "patternId": "SC2148",
+        "level": "Error",
+        "category": "ErrorProne"
+      }
+    ]
+  }
