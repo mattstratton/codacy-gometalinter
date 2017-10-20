@@ -27,7 +27,7 @@ version in Docker := "1.0"
 organization := "com.codacy"
 
 val installAll =
-  """apk --no-cache add bash"""
+  """apk --no-cache add bash && apk --update add openjdk7-jre"""
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"

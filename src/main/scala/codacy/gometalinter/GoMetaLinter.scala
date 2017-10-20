@@ -8,10 +8,11 @@ import play.api.libs.json._
 
 import scala.util.Try
 
-case class GoMetaLinterResult(file: String, line: Int, column: Int, level: String, code: Int, message: String)
+case class GoMetaLinterResult(linter: String, severity: String, path: String, line: Int, col: Int,  message: String)
 
 object GoMetaLinterResult {
-  implicit val GoMetaLinterResult = Json.format[GoMetaLinterResult]
+
+  implicit val goMetaLinterResult = Json.format[GoMetaLinterResult]
 }
 
 object GoMetaLinter extends Tool {
@@ -21,14 +22,14 @@ object GoMetaLinter extends Tool {
     Try {
       val filesToLint: Seq[String] = files.fold {
         FileHelper.listAllFiles(path)
-          .map(_.getAbsolutePath).filter(_.endsWith(".sh"))
+          .map(_.getAbsolutePath).filter(_.endsWith(".go"))
       } {
         paths =>
           paths.map(_.toString).toList
       }
 
 // @TODO - update with the proper command
-      val command = List("gometalinter", "-f", "json") ++ filesToLint
+      val command = List("gometalinter", "--vendor", "--json", "./...") 
       CommandRunner.exec(command) match {
         case Right(resultFromTool) =>
           parseToolResult(resultFromTool.stdout, path, conf)
@@ -44,9 +45,9 @@ object GoMetaLinter extends Tool {
       .flatMap(_.asOpt[List[GoMetaLinterResult]]).getOrElse(List.empty)
       .map { result =>
         Issue(
-          SourcePath(FileHelper.stripPath(result.file, path.toString)),
-          ResultMessage(result.message),
-          PatternId(s"SC${result.code}"),
+          SourcePath(FileHelper.stripPath(result.path, path.toString)),
+          ResultMessage(s"${result.linter}: ${result.message}"),
+          PatternId("megacheck"),
           ResultLine(result.line))
       }
 

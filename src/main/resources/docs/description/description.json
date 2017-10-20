@@ -1,0 +1,8 @@
+[
+    {
+      "patternId":"structcheck-warning",
+      "title":"This is a title",
+      "description":"This is a description",
+      "timeToFix": 5
+    }
+  ]

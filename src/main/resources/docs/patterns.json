@@ -1,0 +1,25 @@
+{
+    "name": "gometalinter",
+    "patterns": [
+      {
+        "patternId": "structcheck-warning",
+        "level": "Warning",
+        "category": "CodeStyle"
+      },
+      {
+          "patternId": "structcheck-error",
+          "level": "Error",
+          "category": "CodeStyle"
+      },
+      {
+        "patternId": "megacheck-warning",
+        "level": "Warning",
+        "category": "CodeStyle"
+    },
+    {
+      "patternId": "megacheck",
+      "level": "Warning",
+      "category": "CodeStyle"
+  }
+    ]
+  }
